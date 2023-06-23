@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    
+    {% if page == 'register' %}
+    
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        <!-- Input:Text -->
+        {% for field in form %}
+            <div id='centre'>
+                <div class="fields">
+                <label for="" class="border">{{field.label}}</label>
+                    {{field}}
+                </div>
+
+
+                {% for error in fields.erros %}
+                    <p>{{error}}</p>
+                {% endfor %}
+                
+            </div>
+        {% endfor %}
+        <input type="submit" value="Sign In" class="btn">
+    </form>
+
+    {% else %}
+        <div class='msg'>
+            {% if messages %}
+                {% for message in messages %}
+                    <div>
+                        <strong>{{message}}</strong>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div id="centre">
+                <div class="names">
+                    <div class="fields">
+                        <label for="" class="border">Username:</label>
+                        <input type="text" class='field' name="Username" id="", placeholder="Enter your Username">
+                    </div>
+                    <div class="fields">
+                        <label for="" class="border">Password:</label>
+                        <input type="password" class='field' name="Password" id="", placeholder="••••••••">
+                    </div>
+                </div>
+                <div class='buttons'>
+                    <input type="submit" value="Login" class='btn'>
+                    <a href="#">Forget Password</a>
+                </div>
+            </div>
+        </form>
+        <div>
+            <p>
+                <a href="{% url 'register' %}">Don't have an account click me to Signup</a>
+            </p>
+        </div>
+
+    {% endif %}
+{% endblock content %}

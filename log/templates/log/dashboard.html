@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class='msg'>
+        {% if messages %}
+        {% for message in messages %}
+        <div>
+            <strong>{{message}}</strong>
+        </div>
+        {% endfor %}
+        
+        {% endif %}
+    </div>
+    <div class='heading'>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas minima 
+            repudiandae, eligendi dolor asperiores nihil commodi aspernatur consequuntur? Dolore illo beatae 
+            quia perspiciatis aspernatur, voluptate accusamus, possimus fugiat tenetur obcaecati id recusandae quo cupiditate. 
+            Id suscipit laborum sed accusantium aliquam neque doloremque, nihil rerum aliquid ipsum voluptatum, 
+            velit, laboriosam accusamus.
+        </p>
+    </div>
+{% endblock content %}

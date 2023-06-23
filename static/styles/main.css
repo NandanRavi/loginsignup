@@ -1,0 +1,148 @@
+body, ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.btn{
+    background-color: red;
+    padding: 10px 15px;
+    border-radius: 25%;
+    margin-left: 20px;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+.space{
+    margin-top: 10px;
+    margin-top:20rem;
+    margin-left: 50%;
+    width: 700px;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.msg{
+    background-color: #878484;
+    color: azure;
+}
+/* Navbar styles */
+
+
+#navbar {
+    background-color: #000;
+    position: relative;
+}
+
+#navbar-toggle{
+    display: none;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.navbar-logo {
+    font-weight: 700;
+    font-size: 2rem;
+    width: 70px;
+    height: 30px;
+    background-color: #000;
+    color: #f2f2f2;
+    margin-right: 10px;
+}
+
+.navbar-items {
+display: flex;
+margin-right: 150px;
+}
+
+.navbar-items li {
+margin-right: 10px;
+}
+
+.navbar-items li a {
+text-decoration: none;
+color: #878484;
+font-size: 1.2rem;
+}
+
+.navbar-items li a:hover{
+    color: #f2f2f2;
+}
+
+
+/* Home */
+.heading{
+    margin: 0.5rem;
+    background-color: #d7d3d3;
+    color: #3a0e61;
+}
+/* Dashboard */
+
+
+.heading p{
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 25%;
+}
+
+/* Login-Signup */
+#centre{
+    border: 2px solid black;
+    background-color: #d7d3d3;
+    border-radius: 5%;
+    padding: 0px 0px 10px 0px;
+}
+.names{
+    margin: 10px 20px;
+}
+
+.border{
+    font-size: 1.5rem;
+}
+
+.field{
+    background: #181444;
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+.fields label{
+    font-weight: 400;
+}
+
+.fields{
+    padding: 0.5rem;
+}
+
+
+
+
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+.navbar-items {
+    display: none;
+}
+
+#navbar-toggle {
+    display: block;
+}
+
+#navbar-menu {
+    display: none;
+}
+
+#navbar-menu.open {
+    display: block;
+}
+}
